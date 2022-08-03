@@ -1,6 +1,10 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import Counter from './components/Counter';
+import Greetings from './components/WishMessage';
+import LoginForm from './components/loginForm';
+
 
 function App() {
   return (
@@ -15,6 +19,26 @@ function App() {
                 <i className='fa fa-book mr-1'/>Read more</button>
             </div>
           </div>
+
+        {/* <div className="row">
+          <div className="col">
+            <Counter />
+          </div>
+        </div>
+
+      <div className="row">
+        <div className="col">
+          <Greetings />
+        </div>
+      </div> */}
+
+<div className="row">
+  <div className="col">
+    <LoginForm />
+  </div>
+</div>
+
+
         </div>
       </div>
     </React.Fragment>
