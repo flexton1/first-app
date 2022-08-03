@@ -4,12 +4,68 @@ import './App.css';
 import Counter from './components/Counter';
 import Greetings from './components/WishMessage';
 import LoginForm from './components/loginForm';
+import UserList from './components/UserList';
+import UserList2 from './components/UserList2';
+import Navbar from './components/navbar';
+import {Routes, Route, Navigate} from 'react-router-dom';
+import UserDetails from './components/UserDetails';
+import About from './components/About';
 
 
 function App() {
   return (
     <React.Fragment>
-      <div className="container mt-3">
+
+      <Navbar />
+
+     <Routes>
+
+    <Route path={'/'} element={<Navigate to={'/contacts/list'}/>} />
+    <Route path={'/contacts/list'} element={<UserList2 />}/>
+    
+    <Route path={'/contacts/:id'} element={<UserDetails />}/>
+
+    <Route path={'/about'} element={<About />}/>
+     </Routes>
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+     
+      {/* <div className="container mt-3">
         <div className="grid">
           <div className="row">
             <div className="col">
@@ -19,6 +75,48 @@ function App() {
                 <i className='fa fa-book mr-1'/>Read more</button>
             </div>
           </div>
+
+
+
+
+        <div className="row">
+          <div className="col">
+            <UserList2 />
+          </div>
+        </div> */}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          {/* <div className="row">
+            <div className="col">
+              <UserList />
+            </div>
+          </div> */}
+
+
+
+
+
+
 
         {/* <div className="row">
           <div className="col">
@@ -32,15 +130,15 @@ function App() {
         </div>
       </div> */}
 
-<div className="row">
+{/* <div className="row">
   <div className="col">
     <LoginForm />
   </div>
-</div>
+</div> */}
 
 
-        </div>
-      </div>
+        {/* </div>
+      </div> */}
     </React.Fragment>
   );
 }
